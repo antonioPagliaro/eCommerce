@@ -16,6 +16,22 @@ public class Account {
 		this.balance = balance;
 	}
 	
+	public void deposit(double value) throws AccountOperationException {
+		if(value>0) {
+			this.balance=balance+value;
+		}
+		else {
+			throw new AccountOperationException();
+		}
+	}
 	
+	
+	public void withdraw(double value) throws AccountOperationException {
+		if(value >0) {
+			this.balance=balance-value;
+		}else {
+			throw new AccountOperationException();
+		}
+	}
 
 }
