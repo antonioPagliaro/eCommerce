@@ -5,14 +5,14 @@ public class Product {
 	//Attributi della classe
 	
 	private String code;
-	private String price;
+	private double price;
 	private String description;
 	private int quantity;
 	
 	
 	// Costruttori 
 	
-	public Product(String code, String price, String description, int quantity) {
+	public Product(String code, double price, String description, int quantity) {
 		super();
 		this.code = code;
 		this.price = price;
@@ -33,12 +33,12 @@ public class Product {
 	}
 
 
-	public String getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
 
-	public void setPrice(String price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 

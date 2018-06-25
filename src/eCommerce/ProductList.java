@@ -28,6 +28,13 @@ public class ProductList {
 	}
 	
 	
+	public void showAll() {
+		for(Product p : productList) {
+			System.out.println(p);
+		}
+	}
+	
+	
 	
 	
 	

@@ -7,7 +7,9 @@ public class User {
 	private String surname;
 	private String username;
 	private String password;
-	private Account account;
+    private Cart cart;
+    private Account account;
+
 	
 
 
@@ -78,7 +80,9 @@ public class User {
 	
 	
 	
-	
+	public void addCart(Cart cart) {
+		this.cart=cart;
+	}
 	
 	
 	
