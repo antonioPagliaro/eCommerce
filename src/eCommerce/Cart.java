@@ -16,21 +16,22 @@ public class Cart {
 	public void addUser(User u) {
 		this.u=u;
 
-
 	}
 
 
 	public void addProduct( Product d) {
 		productList.add(d);
 
+
 	}
 
 	public void removeProduct(Product p) {
 		productList.remove(p);
 
-
 	}
 
+
+	
 	public void addPezzo(Product product) {
 		for(Product p : productList) {
 			if(p.getCode().equals(product.getCode())){
@@ -60,4 +61,5 @@ public class Cart {
 	}
 	
 	
+
 }
