@@ -7,15 +7,19 @@ public class User {
 	private String surname;
 	private String username;
 	private String password;
-	private Cart cart;
+    private Cart cart;
+    private Account account;
+
 	
-	
+
+
 	//Costruttori della classe
-	public User(String name, String surname, String username, String password) {
+	public User(String name, String surname, String username, String password,Account account) {
 		this.name = name;
 		this.surname = surname;
 		this.username = username;
 		this.password = password;
+		this.account=account;
 	}
 
 	// Metodio Get and Set
@@ -58,7 +62,13 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public Account getAccount() {
+		return account;
+	}
 
+	public void setAccount(Account account) {
+		this.account = account;
+	}
 	
 	@Override
 	public String toString() {
