@@ -19,7 +19,7 @@ public class Purchase {
 	}
 	
 	public void abort() {
-		cart.removeAll();
+//		cart.removeAll();
 		
 	}
 	
