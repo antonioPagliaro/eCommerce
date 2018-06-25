@@ -23,7 +23,7 @@ public class Login {
 	public boolean login(String username,String password) throws LoginException {
 		
 		if(users.get(username).equals(password)) {
-			System.out.println("Login effettuato");
+			System.out.println("Login complete");
 			return true;
 		}
 		else 
