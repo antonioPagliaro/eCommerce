@@ -1,5 +1,6 @@
 package eCommerce;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -25,7 +26,7 @@ public void addUser(User u) {
 	}
 	
 public void removeProduct(Product p) {
-	   remove p;
+	  productList.remove(p);
 	 
 	
 	
