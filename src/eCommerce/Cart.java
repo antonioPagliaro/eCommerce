@@ -16,7 +16,6 @@ public class Cart {
 	public void addUser(User u) {
 		this.u=u;
 
-
 	}
 
 
@@ -27,7 +26,6 @@ public class Cart {
 
 	public void removeProduct(Product p) {
 		productList.remove(p);
-
 
 	}
 
