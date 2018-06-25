@@ -7,6 +7,7 @@ public class User {
 	private String surname;
 	private String username;
 	private String password;
+	private Cart cart;
 	
 	
 	//Costruttori della classe
@@ -69,7 +70,9 @@ public class User {
 	
 	
 	
-	
+	public void addCart(Cart cart) {
+		this.cart=cart;
+	}
 	
 	
 	
