@@ -1,17 +1,17 @@
 package eCommerce;
 
 public class Product {
-	
+
 	//Attributi della classe
-	
+
 	private String code;
 	private double price;
 	private String description;
 	private int quantity;
-	
-	
+
+
 	// Costruttori 
-	
+
 	public Product(String code, double price, String description, int quantity) {
 		super();
 		this.code = code;
@@ -20,9 +20,17 @@ public class Product {
 		this.quantity = quantity;
 	}
 
+	public Product(String code, double price, String description) {
+		super();
+		this.code = code;
+		this.price = price;
+		this.description = description;
+		this.quantity = 0;
+	}
+
 
 	// Metodi Get and Set
-	
+
 	public String getCode() {
 		return code;
 	}
@@ -68,12 +76,31 @@ public class Product {
 		return "Product [code=" + code + ", price=" + price + ", description=" + description + ", quantity=" + quantity
 				+ "]";
 	}
-	
-	
-	
-	
-	
-	
-	
+
+
+	// metodo per aumentare la quantità
+
+	public void increaseQuantity() {
+		quantity++;
+
+	}
+
+	// metodo per diminuire la quantità
+
+	public void decreasesQuantity() throws DecreaseQuantityException{
+
+		if (quantity <= 0) {
+
+			throw new DecreaseQuantityException();
+
+		}else {
+
+			quantity--;
+			
+		}
+
+	}
+
+
 
 }
