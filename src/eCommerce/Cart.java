@@ -6,31 +6,30 @@ import java.util.List;
 
 public class Cart {
 
-List<Product> productList;
-User u;
+	List<Product> productList;
+	User u;
 
-public Cart () {
-	productList=new ArrayList<Product>();
-}
-
-public void addUser(User u) {
-	this.u=u;
-	
-	
-}
-
-
- public void addProduct( Product d) {
-		productList.add(d);
-		
+	public Cart () {
+		productList=new ArrayList<Product>();
 	}
-	
-public void removeProduct(Product p) {
-	   remove p;
-	 
-	
-	
-}
-	
-	
+
+	public void addUser(User u) {
+		this.u=u;
+
+
+	}
+
+
+	public void addProduct( Product d) {
+		productList.add(d);
+
+	}
+
+	public void removeProduct(Product p) {
+		productList.remove(p);
+
+
+	}
+
+
 }
