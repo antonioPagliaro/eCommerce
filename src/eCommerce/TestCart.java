@@ -12,7 +12,8 @@ public class TestCart {
 		pl.addProduct(p3);
 		
 		Cart cart= new Cart();
-		User u = new User("toni", "pag", "tp", "pass");
+		Account account=new Account(18.0);
+		User u = new User("toni", "pag", "tp", "pass",account);
 		u.addCart(cart);
 		cart.addUser(u);
 		cart.addProduct(p);
