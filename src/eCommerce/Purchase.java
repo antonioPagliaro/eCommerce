@@ -13,7 +13,7 @@ public class Purchase {
 	}
 	
 	
-	public void effettua(User user) {
+	public void effettua(User user) throws AccountOperationException {
 		 cart.u.getAccount().withdraw(cart.getTotalAmount());
 		
 	}
