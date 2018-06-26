@@ -13,10 +13,14 @@ public class Purchase {
 	}
 	
 	
-	public void makePayment() throws AccountOperationException {
-		 cart.getUser().getAccount().withdraw(cart.getTotalAmount());
+	public void makePurchase() throws AccountOperationException  {
+		 makePayment();
 		 cart.cleanCart();
 		
+	}
+	
+	private void makePayment() throws AccountOperationException {
+		cart.getUser().getAccount().withdraw(cart.getTotalAmount());
 	}
 	
 	public void abort() {
