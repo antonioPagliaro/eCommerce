@@ -37,7 +37,7 @@ public class TestCart {
 		pl.showAll();
 		System.out.println("Conto utente prima del pagamento:"+u.getAccount().getBalance());
 		Purchase purchase=new Purchase(cart);
-		purchase.makePurchase();
+		purchase.makePurchaseWithCreditCard();
 		System.out.println("Conto utente dopo del pagamento:"+u.getAccount().getBalance());
 		
 		
