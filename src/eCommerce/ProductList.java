@@ -1,13 +1,8 @@
 package eCommerce;
 
 import java.util.ArrayList;
-<<<<<<< HEAD
-import java.util.Collection;
-import java.util.Collections;
-=======
 import java.util.Collections;
 import java.util.Comparator;
->>>>>>> 4de0f3e88337971bc849090388c235170cd3f63c
 import java.util.LinkedList;
 import java.util.List;
 
@@ -89,8 +84,10 @@ public class ProductList {
 	         }
 	      });
 	      return catalogoOrdinato;   
-	   }
-
+}
+		
+		
+}
 
 
 
