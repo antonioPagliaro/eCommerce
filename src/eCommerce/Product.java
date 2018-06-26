@@ -25,7 +25,7 @@ public class Product {
 		this.code = code;
 		this.price = price;
 		this.description = description;
-		this.quantity = 0;
+		this.quantity = 1;
 	}
 
 
