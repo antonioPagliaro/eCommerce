@@ -5,6 +5,15 @@ import java.util.List;
 
 public class ProductList {
 	
+	public List<Product> getProductList() {
+		return productList;
+	}
+
+	public void setProductList(List<Product> productList) {
+		this.productList = productList;
+	}
+
+
 	// Attributi
 	private List<Product> productList;
 	

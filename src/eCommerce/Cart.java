@@ -1,27 +1,31 @@
 package eCommerce;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Cart {
 
-	List<Product> productList;
-	User u;
+	private List<Product> productList;
+	private User user;
 
 	public Cart () {
 		productList=new ArrayList<Product>();
 	}
 
-	public void addUser(User u) {
-		this.u=u;
-
+	public void addUser(User user) {
+		this.user=user;
+	}
+	public User getUser() {
+		return user;
 	}
 
+	
 
-	public void addProduct( Product d) {
-		productList.add(d);
 
+	public void addProduct( Product product) {
+		productList.add(product);
+		user.getProductList().removeProduct(product);
 
 	}
 
@@ -31,7 +35,7 @@ public class Cart {
 	}
 
 
-	
+
 	public void addPezzo(Product product) {
 		for(Product p : productList) {
 			if(p.getCode().equals(product.getCode())){
@@ -59,7 +63,33 @@ public class Cart {
 		}
 		return total;
 	}
+
+	//reset productList status
+	public void removeAll() {
+		//usare iterator
+		Iterator<Product> iterator = productList.iterator();
+		while (iterator.hasNext()) {
+			Product p=	iterator.next();
+			user.getProductList().getProductList().add(p);
+			iterator.remove();
+		}
+
+	}
+
 	
-	
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public List<Product> getProductList() {
+		return productList;
+	}
+
+	public void setProductList(List<Product> productList) {
+		this.productList = productList;
+	}
+
+
 
 }
