@@ -1,8 +1,10 @@
 package eCommerce;
 
+import java.util.Date;
+
 public class Account {
 	private double balance;
-
+   
 	public Account(double balance) {
 		super();
 		this.balance = balance;
@@ -27,11 +29,31 @@ public class Account {
 	
 	
 	public void withdraw(double value) throws AccountOperationException {
-		if(value >0) {
+		if(value >0 && value<balance ) {
 			this.balance=balance-value;
 		}else {
 			throw new AccountOperationException();
 		}
 	}
+	
+	
+	public void withdrawWithCheck (Check check,Date dateDay)throws AccountOperationException {
+		if (check.getDate().equals(dateDay)|| dateDay.after(check.getDate())) {
+			this.withdraw(check.getImporto());
+			}
+			else {
+				System.out.println("errore");
+			}
+		}
+		            
+		
+	}
+	
+	
+	
+	
+	
+	
+	
 
-}
+
