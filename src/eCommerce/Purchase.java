@@ -19,14 +19,14 @@ public class Purchase {
 		
 	}
 	
-	public void makePurchaseWithCheck(Check check) throws AccountOperationException  {
+	public void makePurchaseWithCheck(Check check) throws AccountOperationException, PaymentWithCheckException  {
 		 makePaymentWithCheck(check);
 		 cart.cleanCart();
 		
 	}
 	
 	
-	private void makePaymentWithCheck(Check check) throws AccountOperationException {
+	private void makePaymentWithCheck(Check check) throws AccountOperationException, PaymentWithCheckException {
 		cart.getUser().getAccount().withdrawWithCheck(check);
 		
 	}
