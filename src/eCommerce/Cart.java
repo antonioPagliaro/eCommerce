@@ -13,6 +13,10 @@ public class Cart {
 		productList=new ArrayList<Product>();
 	}
 
+	public User getU() {
+		return u;
+	}
+
 	public void addUser(User u) {
 		this.u=u;
 
