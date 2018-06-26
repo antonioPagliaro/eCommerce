@@ -1,4 +1,4 @@
-package eCommerce;
+package eCommerceLogin;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -27,7 +27,6 @@ public class Login {
 			return true;
 		}
 		else 
-			throw new LoginException(); 
-	
+			throw new LoginException();
 	}
 }
