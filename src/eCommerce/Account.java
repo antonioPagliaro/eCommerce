@@ -1,6 +1,5 @@
 package eCommerce;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Account {
@@ -38,26 +37,14 @@ public class Account {
 	}
 	
 	
-	public void withdrawWithCheck (Check check)throws AccountOperationException, PaymentWithCheckException {
-	SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-    	Date dateDay = new Date();
+	public void withdrawWithCheck (Check check,Date dateDay)throws AccountOperationException {
 		if (check.getDate().equals(dateDay)|| dateDay.after(check.getDate())) {
 			this.withdraw(check.getImporto());
-			System.out.println("Payment with check complete");
 			}
 			else {
-				throw new PaymentWithCheckException();
+				System.out.println("errore");
 			}
 		}
 		            
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-
-
