@@ -5,6 +5,8 @@ public class TestEffettua {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+	  //public Product(String code, double price, String description, String categoria, int quantity)
+		// sistemare l'oggetto perchè è stato aggiunto l'attributo categoria
       Product p1=new Product("345", 50.0, "scarpe",2);
       Product p2=new Product("346", 45.0, "scarpe",2);
       Cart cart= Cart.getIstance();
