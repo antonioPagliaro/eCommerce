@@ -8,24 +8,27 @@ public class Product {
 	private double price;
 	private String description;
 	private int quantity;
+	private String category;
 
 
 	// Costruttori 
 
-	public Product(String code, double price, String description, int quantity) {
+	public Product(String code, double price, String description, String category, int quantity) {
 		super();
 		this.code = code;
 		this.price = price;
 		this.description = description;
 		this.quantity = quantity;
+		this.category = category;
 	}
 
-	public Product(String code, double price, String description) {
+	public Product(String code, double price, String description, String category) {
 		super();
 		this.code = code;
 		this.price = price;
 		this.description = description;
 		this.quantity = 1;
+		this.category = category;
 	}
 
 
@@ -70,11 +73,21 @@ public class Product {
 		this.quantity = quantity;
 	}
 
+	
+	
+
+	public String getcategory() {
+		return category;
+	}
+
+	public void setcategory(String category) {
+		this.category = category;
+	}
 
 	@Override
 	public String toString() {
 		return "Product [code=" + code + ", price=" + price + ", description=" + description + ", quantity=" + quantity
-				+ "]";
+				+ ", category=" + category + "]";
 	}
 
 

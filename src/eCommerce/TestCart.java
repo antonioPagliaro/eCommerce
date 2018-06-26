@@ -2,9 +2,11 @@ package eCommerce;
 
 public class TestCart {
 	public static void main(String[] args) throws AccountOperationException {
-		Product p = new Product("1", 1.0, "prodotto 1",1);
-		Product p2 = new Product("2", 2.5, "prodotto 2",1);
-		Product p3 = new Product("3", 3.0, "prodotto 3",2);
+		
+		//public Product(String code, double price, String description, String categoria, int quantity)
+		Product p = new Product("1", 1.0, "prodotto 1","scarpe",1);
+		Product p2 = new Product("2", 2.5, "prodotto 2","maglie",1);
+		Product p3 = new Product("3", 3.0, "prodotto 3","costumi",2);
 		
 		
 		
@@ -39,15 +41,10 @@ public class TestCart {
 		Purchase purchase=new Purchase(cart);
 		purchase.makePurchase();
 		System.out.println("Conto utente dopo del pagamento:"+u.getAccount().getBalance());
-		
-		
-		
-		
+			
 		System.out.println("Rimozione carrello");
 		purchase.abort();
-		
-		
-		
+				
 		System.out.println("elenco generale 3 ");
 		pl.showAll();
 		System.out.println("Carrello utente "+u.getCart().getProductList());
