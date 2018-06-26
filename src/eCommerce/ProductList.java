@@ -1,6 +1,8 @@
 package eCommerce;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -71,11 +73,16 @@ public class ProductList {
 
 	// Metodo per ordinare in modo ascendente il prezzo
 	
-	public List<Product> orderPrice(double price){
-		
-		
-		
-	}
+		public ArrayList<Product> orderPrice(){
+	      ArrayList<Product> catalogoOrdinato = (ArrayList<Product>) productList;
+	      Collections.sort(catalogoOrdinato, new Comparator<Product>(){
+	         @Override
+	         public int compare(Product o1, Product o2){
+	            return ((Double)o1.getPrice()).compareTo(o2.getPrice());
+	         }
+	      });
+	      return catalogoOrdinato;   
+	   }
 
 
 
