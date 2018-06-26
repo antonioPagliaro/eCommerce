@@ -38,14 +38,15 @@ public class Account {
 	}
 	
 	
-	public void withdrawWithCheck (Check check)throws AccountOperationException {
+	public void withdrawWithCheck (Check check)throws AccountOperationException, PaymentWithCheckException {
 	SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
     	Date dateDay = new Date();
 		if (check.getDate().equals(dateDay)|| dateDay.after(check.getDate())) {
 			this.withdraw(check.getImporto());
+			System.out.println("Payment with check complete");
 			}
 			else {
-				System.out.println("errore");
+				throw new PaymentWithCheckException();
 			}
 		}
 		            
