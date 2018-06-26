@@ -1,8 +1,12 @@
 package eCommerce;
 
+<<<<<<< HEAD
+import java.util.ArrayList;
+=======
 import eCommerce.DecreaseQuantityException;
 import eCommerce.Product;
 import eCommerce.ProductList;
+>>>>>>> 44dfe2047d46699d6f1c1b3cc7a952fc3cca9021
 
 public class TestProduct {
 
@@ -31,6 +35,11 @@ public class TestProduct {
 		System.out.println(listaprodotti.searchByPrice(0, 5));
 		
 		System.out.println(listaprodotti.searchByPrice(7, 15));
+		
+		
+		
+		
+		
 		
 		
 		
