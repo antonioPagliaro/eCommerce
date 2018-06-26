@@ -74,9 +74,6 @@ public class ProductList {
 	}
 
 	// Metodo per ordinare in modo ascendente il prezzo
-	
-		
-		
 		public ArrayList<Product> orderPrice(){
 	      ArrayList<Product> catalogoOrdinato = (ArrayList<Product>) productList;
 	      Collections.sort(catalogoOrdinato, new Comparator<Product>(){
@@ -90,7 +87,6 @@ public class ProductList {
 
 
 	// Metoto per ordinare in modo discendente il prezzo
-
 	public ArrayList<Product> descendePrice(){
 		ArrayList<Product> catalogoOrdinato = orderPrice();
 
