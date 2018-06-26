@@ -1,7 +1,11 @@
-package eCommerce;
+package Test;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import eCommerce.Account;
+import eCommerce.AccountOperationException;
+import eCommerce.Check;
 
 public class TestPaymentWithCheck {
 
