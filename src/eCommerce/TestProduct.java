@@ -1,5 +1,9 @@
 package eCommerce;
 
+import eCommerce.DecreaseQuantityException;
+import eCommerce.Product;
+import eCommerce.ProductList;
+
 public class TestProduct {
 
 	public static void main(String[] args) throws DecreaseQuantityException {
