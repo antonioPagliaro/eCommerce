@@ -20,7 +20,7 @@ public class Cart {
 		return user;
 	}
 
-	
+
 
 
 	public void addProduct( Product product) {
@@ -39,19 +39,18 @@ public class Cart {
 	public void addPezzo(Product product) {
 		for(Product p : productList) {
 			if(p.getCode().equals(product.getCode())){
-				//p.incrementQuantity();
+				p.increaseQuantity();
 
 			}
 		}
 	}
 
-	public void removePezzo(Product product) {
+	public void removePezzo(Product product) throws DecreaseQuantityException {
 		for(Product p : productList) {
 			if(p.getCode().equals(product.getCode())){
-				//p.decrementQuantity();
+				p.decreasesQuantity();
 			}
 		}
-
 	}
 
 
@@ -76,7 +75,15 @@ public class Cart {
 
 	}
 
-	
+	public void cleanCart() {
+		Iterator<Product> iterator = productList.iterator();
+		while (iterator.hasNext()) {
+			Product p=	iterator.next();
+			iterator.remove();
+		}
+	}
+
+
 
 	public void setUser(User user) {
 		this.user = user;

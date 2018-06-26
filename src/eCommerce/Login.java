@@ -16,18 +16,18 @@ public class Login {
 		users.put("toni", "toni88");
 		users.put("fabio", "fabio95");
 		users.put("firno", "firno87");
-
-		
+		users.put("domenico", "guida89");
 	}
 
 	public boolean login(String username,String password) throws LoginException {
 		
+		if (users.get(username)==null)throw new LoginException();
 		if(users.get(username).equals(password)) {
 			System.out.println("Login complete");
 			return true;
 		}
 		else 
 			throw new LoginException(); 
-		
+	
 	}
 }
