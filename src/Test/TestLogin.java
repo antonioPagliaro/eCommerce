@@ -1,5 +1,5 @@
-package eCommerce;
-
+package Test;
+import eCommerceLogin.*;
 import java.util.Scanner;
 
 public class TestLogin {
