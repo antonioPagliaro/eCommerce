@@ -8,8 +8,21 @@ public class Cart {
 
 	private List<Product> productList;
 	private User user;
+	
+	 private static Cart istance=null; //riferimento all' istanza
+	
+	 
+	 
+	 public static Cart getIstance() {
+        	 synchronized(Cart.class) {
+                 if( istance == null )
+                         istance = new Cart();
+                 }
+         return istance;
+ }
 
-	public Cart () {
+	 
+	private Cart () {
 		productList=new ArrayList<Product>();
 	}
 
