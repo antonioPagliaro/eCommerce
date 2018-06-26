@@ -39,7 +39,7 @@ public class Cart {
 	public void addPezzo(Product product) {
 		for(Product p : productList) {
 			if(p.getCode().equals(product.getCode())){
-				//p.incrementQuantity();
+				p.increaseQuantity();
 
 			}
 		}
@@ -48,8 +48,7 @@ public class Cart {
 	public void removePezzo(Product product) {
 		for(Product p : productList) {
 			if(p.getCode().equals(product.getCode())){
-				//p.decrementQuantity();
-			}
+				p.decreasesQuantity();
 		}
 
 	}
@@ -74,6 +73,14 @@ public class Cart {
 			iterator.remove();
 		}
 
+	}
+	
+	public void cleanCart() {
+		Iterator<Product> iterator = productList.iterator();
+		while (iterator.hasNext()) {
+			Product p=	iterator.next();
+			iterator.remove();
+		}
 	}
 
 	

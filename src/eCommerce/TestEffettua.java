@@ -21,7 +21,7 @@ public class TestEffettua {
 		
 		try {
 			
-			purchase.effettua(user);
+			purchase.makePayment();
 			System.out.println("pagamento effettuato");
 			
 		} catch( AccountOperationException e) {
