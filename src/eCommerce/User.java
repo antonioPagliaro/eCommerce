@@ -39,6 +39,17 @@ public class User {
 		this.account=account;
 	}
 
+	
+	
+	public User(String name, String surname, String username, String password) {
+		super();
+		this.name = name;
+		this.surname = surname;
+		this.username = username;
+		this.password = password;
+		this.addCart();
+	}
+
 	// Metodio Get and Set
 
 	public String getName() {
@@ -97,8 +108,8 @@ public class User {
 	
 	
 	
-	public void addCart(Cart cart) {
-		this.cart=cart;
+	public void addCart() {
+		this.cart=Cart.getIstance();
 	}
 	
 	
