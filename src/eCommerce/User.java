@@ -9,9 +9,26 @@ public class User {
 	private String password;
     private Cart cart;
     private Account account;
+    private ProductList productList;
 
 	
 
+
+	public Cart getCart() {
+		return cart;
+	}
+
+	public void setCart(Cart cart) {
+		this.cart = cart;
+	}
+
+	public ProductList getProductList() {
+		return productList;
+	}
+
+	public void setProductList(ProductList productList) {
+		this.productList = productList;
+	}
 
 	//Costruttori della classe
 	public User(String name, String surname, String username, String password,Account account) {
