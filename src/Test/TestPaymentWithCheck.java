@@ -21,7 +21,7 @@ public class TestPaymentWithCheck {
     	System.out.println(dateFormat.format(date)); 
     	System.out.println(dateFormat.format(date2)); 
 	  try {
-    	account.withdrawWithCheck(check, date2);
+    	account.withdrawWithCheck(check);
 	  } catch(AccountOperationException e) {
 		  System.out.println("impossibile pagare");
 	  }
