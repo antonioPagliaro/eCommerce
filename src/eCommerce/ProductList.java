@@ -1,6 +1,7 @@
 package eCommerce;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class ProductList {
@@ -42,6 +43,30 @@ public class ProductList {
 			System.out.println(p);
 		}
 	}
+	
+	
+	// metodo di ricerca per categoria 
+	
+	public List<Product> searchByCategory(String category) {
+		List<Product> temp = new ArrayList<Product>();
+		 for (Product p: productList) {
+			if(p.getcategory().equals(category)) {
+				temp.add(p);
+			}
+		}return temp;
+	}
+	
+	// metodo di ricerca per prezzo
+	public List<Product> searchByPrice(double min, double max) {
+		List<Product> temp = new ArrayList<Product>();
+		 for (Product p: productList) {
+			if(p.getPrice() <= max && p.getPrice() >= min){
+				temp.add(p);
+			}
+		}return temp;
+	}
+	
+	
 	
 	
 	
