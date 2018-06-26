@@ -1,7 +1,15 @@
 package Test;
 import eCommerce.*;
+import eCommerceLogin.Login;
+import eCommerceLogin.LoginException;
 public class TestCart {
-	public static void main(String[] args) throws AccountOperationException {
+	public static void main(String[] args) throws AccountOperationException, LoginException {
+		
+		
+		Login l = new Login();
+		
+		User u = l.signIn();
+		System.out.println(u);
 		Product p = new Product("1", 1.0, "prodotto 1","scarpe",1);
 		Product p2 = new Product("2", 2.5, "prodotto 2","maglie",1);
 		Product p3 = new Product("3", 3.0, "prodotto 3","costumi",2);
@@ -16,16 +24,20 @@ public class TestCart {
 		System.out.println("elenco generale 1");
 		pl.showAll();
 		
-		Cart cart= Cart.getIstance();
+		
 		Account account=new Account(18.0);
-		User u = new User("toni", "pag", "tp", "pass",account);
-		u.addCart(cart);
+		u.setAccount(account);
+		
+		Cart cart= u.getCart();
 		u.setProductList(pl);
+		
+		Cart cart2=u.getCart();
+		cart2.addUser(u);
 		
 		cart.addUser(u);
 		cart.addProduct(p);
 		cart.addProduct(p2);
-//		cart.addProduct(p3);
+		cart2.addProduct(p3);
 		
 		
 
