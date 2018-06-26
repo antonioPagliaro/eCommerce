@@ -23,7 +23,7 @@ public class TestProduct {
 		
 		System.out.println(lista.orderPrice());
 		
-	
+		System.out.println(lista.descendePrice());
 		
 		
 	}
