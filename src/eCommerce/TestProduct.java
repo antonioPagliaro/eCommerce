@@ -1,6 +1,12 @@
 package eCommerce;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
+=======
+import eCommerce.DecreaseQuantityException;
+import eCommerce.Product;
+import eCommerce.ProductList;
+>>>>>>> 44dfe2047d46699d6f1c1b3cc7a952fc3cca9021
 
 public class TestProduct {
 

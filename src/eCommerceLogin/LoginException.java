@@ -1,4 +1,4 @@
-package eCommerce;
+package eCommerceLogin;
 
 public class LoginException extends Exception {
 
