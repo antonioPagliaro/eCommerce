@@ -10,7 +10,11 @@ public class TestLogin {
 		String username=s.nextLine();
 		System.out.println("Inserisci password");
 		String password=s.nextLine();
-		login.login(username, password);
+		
+		try {
+			login.login(username, password);
+		}catch(LoginException e) {
+			System.out.println(e.getMessage());
+		}
 	}
-
 }
