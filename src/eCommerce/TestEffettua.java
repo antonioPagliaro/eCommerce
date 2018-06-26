@@ -7,7 +7,7 @@ public class TestEffettua {
 		
       Product p1=new Product("345", 50.0, "scarpe",2);
       Product p2=new Product("346", 45.0, "scarpe",2);
-		Cart cart=new Cart();
+      Cart cart= Cart.getIstance();
         cart.addProduct(p1);
         cart.addProduct(p2);
         cart.getTotalAmount();
@@ -21,7 +21,7 @@ public class TestEffettua {
 		
 		try {
 			
-			purchase.makePayment();
+			purchase.makePurchase();
 			System.out.println("pagamento effettuato");
 			
 		} catch( AccountOperationException e) {

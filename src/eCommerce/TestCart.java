@@ -16,7 +16,7 @@ public class TestCart {
 		System.out.println("elenco generale 1");
 		pl.showAll();
 		
-		Cart cart= new Cart();
+		Cart cart= Cart.getIstance();
 		Account account=new Account(18.0);
 		User u = new User("toni", "pag", "tp", "pass",account);
 		u.addCart(cart);
@@ -37,7 +37,7 @@ public class TestCart {
 		pl.showAll();
 		System.out.println("Conto utente prima del pagamento:"+u.getAccount().getBalance());
 		Purchase purchase=new Purchase(cart);
-		purchase.makePayment();
+		purchase.makePurchase();
 		System.out.println("Conto utente dopo del pagamento:"+u.getAccount().getBalance());
 		
 		
