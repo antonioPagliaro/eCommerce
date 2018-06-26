@@ -14,7 +14,7 @@ public class Purchase {
 	
 	
 	public void effettua(User user) throws AccountOperationException {
-		 cart.u.getAccount().withdraw(cart.getTotalAmount());
+		 cart.getUser().getAccount().withdraw(cart.getTotalAmount());
 		
 	}
 	
