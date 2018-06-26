@@ -1,5 +1,7 @@
 package eCommerce;
 
+import java.util.ArrayList;
+
 public class TestProduct {
 
 	public static void main(String[] args) throws DecreaseQuantityException {
@@ -27,6 +29,11 @@ public class TestProduct {
 		System.out.println(listaprodotti.searchByPrice(0, 5));
 		
 		System.out.println(listaprodotti.searchByPrice(7, 15));
+		
+		
+		
+		
+		
 		
 		
 		
