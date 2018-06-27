@@ -1,5 +1,7 @@
 package eCommerce;
 
+import eCommerce.model.Payment;
+
 public class Purchase {
 	
 	
