@@ -12,7 +12,7 @@ public class TestLogin {
 		String password=s.nextLine();
 		
 		try {
-			login.login(username, password);
+			login.signIn();
 		}catch(LoginException e) {
 			System.out.println(e.getMessage());
 		}
