@@ -2,7 +2,7 @@ package Test;
 import eCommerce.*;
 public class TestEffettua {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws DecreaseQuantityException {
 		// TODO Auto-generated method stub
 		
       Product p1=new Product("345", 50.0, "descrizione 1","scarpe",2);

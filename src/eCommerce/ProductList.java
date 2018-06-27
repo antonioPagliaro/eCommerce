@@ -74,16 +74,16 @@ public class ProductList {
 	}
 
 	// Metodo per ordinare in modo ascendente il prezzo
-		public ArrayList<Product> orderPrice(){
-	      ArrayList<Product> catalogoOrdinato = (ArrayList<Product>) productList;
-	      Collections.sort(catalogoOrdinato, new Comparator<Product>(){
-	         @Override
-	         public int compare(Product o1, Product o2){
-	            return ((Double)o1.getPrice()).compareTo(o2.getPrice());
-	         }
-	      });
-	      return catalogoOrdinato;   
-	   }
+	public ArrayList<Product> orderPrice(){
+		ArrayList<Product> catalogoOrdinato = (ArrayList<Product>) productList;
+		Collections.sort(catalogoOrdinato, new Comparator<Product>(){
+			@Override
+			public int compare(Product o1, Product o2){
+				return ((Double)o1.getPrice()).compareTo(o2.getPrice());
+			}
+		});
+		return catalogoOrdinato;   
+	}
 
 
 	// Metoto per ordinare in modo discendente il prezzo
@@ -93,6 +93,34 @@ public class ProductList {
 		Collections.reverse(catalogoOrdinato);
 		return catalogoOrdinato; 
 
+	}
+
+	public boolean isDisponibile(Product product) {
+		for(Product p : productList) {
+			if(p.getCode().equals(product.getCode())){
+				if(p.getQuantity()>0) 
+					return true;
+				}
+			}
+		
+		return false;
+	}
+
+	public void decreaseQuantity(Product product) throws DecreaseQuantityException {
+		for(Product p : productList) {
+			if(p.getCode().equals(product.getCode())){
+				p.decreasesQuantity();
+			}
+		}
+	}
+	
+	
+	public void increaseQuantity(Product product) throws DecreaseQuantityException {
+		for(Product p : productList) {
+			if(p.getCode().equals(product.getCode())){
+				p.increaseQuantity();
+			}
+		}
 	}
 
 
