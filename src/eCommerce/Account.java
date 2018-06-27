@@ -30,7 +30,7 @@ public class Account {
 	
 	
 	public void withdraw(double value) throws AccountOperationException {
-		if(value >0 && value<balance ) {
+		if(value >=0 && value<=balance ) {
 			this.balance=balance-value;
 		}else {
 			throw new AccountOperationException();
@@ -39,7 +39,7 @@ public class Account {
 	
 	
 	public void withdrawWithCheck (Check check)throws AccountOperationException {
-		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/M/yyyy");
     	Date dateDay = new Date();
 		if (check.getDate().equals(dateDay)|| dateDay.after(check.getDate())) {
 			this.withdraw(check.getImporto());
