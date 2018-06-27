@@ -16,7 +16,7 @@ public class TestEffettua {
 		Purchase purchase=new Purchase(cart);
 		Account account=new Account(345.45);
 		User user =new User("fabio", "surname", "f.01", "345", account);
-		user.addCart(cart);
+//		user.addCart(cart);
 		cart.addUser(user);
 		
 		try {
